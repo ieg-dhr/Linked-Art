@@ -14,6 +14,8 @@ dump_dict = {}
 
 print(len(files))
 
+
+# Iterating over each collected file 
 for filename in files:
     print(filename)
     #loading the data of one file
@@ -125,3 +127,8 @@ for filename in files:
 
 with open("K:\\Pharos-all_data\\entity_dump.json", "w") as dump_file:
     json.dump(dump_dict, dump_file, indent=4)
+
+
+### Known issues ###
+# During the final split and extraction of the attributes, elements with multiple values will only keep one value. This is known for some location values.
+# In retrospect it would have been better if the data would be collected in a clean dictionary. It could be worth it, if someone new works with the data, to transform this code in this direction. But this would also include a rework of all code that follows. So it realy depends on how good you understand the structure of the given dictionary and the data as a whole.
