@@ -1,15 +1,15 @@
 import os, json
 
 # Listing all .trig-Files in the given dir
-dir = "K:\\Pharos-all_data\\"
+dir = "data/Pharos-all_data/"  # for linux (check whether for  mac or eindows this is different)
 file_names = os.listdir(dir)
 files = []
 for name in file_names:
     if os.path.isdir(dir + name):
-        subfolder = os.listdir(dir + name + "\\")
+        subfolder = os.listdir(dir + name + "/")
         for subname in subfolder:
-            if os.path.isfile(dir + name + "\\" + subname) & subname.__contains__(".trig"):
-                files.append(name + "\\" + subname)
+            if os.path.isfile(dir + name + "/" + subname) & subname.__contains__(".trig"):
+                files.append(name + "/" + subname)
 dump_dict = {}
 
 print(len(files))
@@ -125,7 +125,7 @@ for filename in files:
     
     dump_dict[filename] = data_dict
 
-with open("K:\\Pharos-all_data\\entity_dump.json", "w") as dump_file:
+with open("data/entity_dump.json", "w") as dump_file:
     json.dump(dump_dict, dump_file, indent=4)
 
 
