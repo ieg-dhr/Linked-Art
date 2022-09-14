@@ -1,6 +1,6 @@
 # Linked-Art
 
-Study case of the [Kunsthistorisches Institut in Florenz](https://www.khi.fi.it/en/index.php) –  Max-Planck-Institut database as it appears within the [PHAROS consortium](http://pharosartresearch.org/home).  
+Study case of the [Kunsthistorisches Institut in Florenz –  Max-Planck-Institut ](https://www.khi.fi.it/en/index.php) database as it appears within the [PHAROS consortium](http://pharosartresearch.org/home).  
 
 Files:  
 - entity_extraction.py: extract entities from the database from .trig files and organize them in dictionaries.  
